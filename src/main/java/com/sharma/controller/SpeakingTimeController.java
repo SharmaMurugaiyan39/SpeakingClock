@@ -33,7 +33,7 @@ public class SpeakingTimeController {
 
 		return new ResponseEntity<>(modelData, headers, status);
 	}
-	@GetMapping("/find:day")
+	@GetMapping("/find:dayzone")
 	@ApiOperation(value = "Find midnight and midday ")
 	public ResponseEntity<String> findTimeZone(@RequestParam String time) {
 
