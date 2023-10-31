@@ -5,17 +5,15 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.5</version>
+		<version>2.4.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>Speaking-Clock</artifactId>
+	<groupId>com.techgeeknext</groupId>
+	<artifactId>SpeakingTime</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Speaking-Clock</name>
-	<description>try my best</description>
-	<properties>
-		<java.version>17</java.version>
-	</properties>
+	<name>Spring-Boot-Speaking Time</name>
+	<description>Spring Boot SpeakingTime</description>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -23,11 +21,39 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>6.16.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.9.2</version> <!-- Use the appropriate version -->
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version> <!-- Use the appropriate version -->
 		</dependency>
 	</dependencies>
+
+	<repositories>
+		<!-- JasperSoft, they modified a standard library for their own special needs -->
+		<repository>
+			<id>jaspersoft-third-party</id>
+			<url>https://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<!-- JasperSoft, they modified a standard library for their own special needs -->
+		<pluginRepository>
+			<id>jaspersoft-third-party</id>
+			<url>https://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/</url>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<build>
 		<plugins>
